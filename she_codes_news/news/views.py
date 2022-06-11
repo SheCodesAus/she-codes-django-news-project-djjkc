@@ -19,7 +19,8 @@ class IndexView(generic.ListView):
         return context
     
     def user_articles(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        user = self.get_object(**kwargs)
+        context = {}
         articles = NewsStory.objects.filter('username').order_by('-pub_date')
         context['username'] = articles
         return context

@@ -21,7 +21,15 @@
 
     <h2>Sort by author</h2>
     <div id="by-author">
-        {% if author %}
+        <form  action="{% url 'news:newStory' %}" method="get">
+            <div class="form-group"></div>
+            <label for="select-author">Author</label>
+            <select id="select-author" class="form-control">
+                <option selected>Choose Author...</option>
+                <option> {{ author }}</option>
+            </select>
+        </form>
+        {% if username %}
             {% for story in all_stories %}
                 {% include "./storyCard.html" with author=username %}
             {% endfor %}
