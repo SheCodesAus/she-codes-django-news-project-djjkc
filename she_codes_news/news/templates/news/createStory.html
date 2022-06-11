@@ -2,11 +2,27 @@
 
 {% block content %}
 
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="submit">
-</form>
-
+<div class = "add-story-container">
+    <h1 id="add-story">
+        Add Your Story
+    </h1>
+    <form id="adding-story" action="{% url 'news:newStory' %}" method="post"> 
+        {% csrf_token %}
+        <div id="create-title">
+            Title: {{ form.title }}
+        </div>
+        <div id="create-date"> 
+            Date: {{ form.pub_date }} 
+        </div>
+        <div id="create-content"> 
+            Content: {{ form.content }} 
+        </div>
+        <div id="create-image"> 
+            Image URL: {{form.image_url }} 
+        </div>
+        <div id="create-submit">
+            <input id="submit" type="submit" value="Create">
+        </div>
+    </form>
+</div>
 {% endblock %}
-
