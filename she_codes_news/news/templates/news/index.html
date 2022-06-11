@@ -19,6 +19,19 @@
         {% endif %}
     </div>
 
+    <h2>Sort by author</h2>
+    <div id="by-author">
+        {% if author %}
+            {% for story in all_stories %}
+                {% include "./storyCard.html" with author=username %}
+            {% endfor %}
+        {% else %}
+            <p>No stories are available.</p>
+        {% endif %}
+    </div>
+
+    <h2>All Stories</h2>
+
     <div id="all-stories">
         {% if latest_stories %}
             {% for story in all_stories %}

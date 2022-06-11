@@ -14,7 +14,7 @@ header {
 }
 
 img {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 
 h1 {
@@ -122,3 +122,13 @@ a, p {
     color: #CAB1BD;
     font-family: 'Pacifico', cursive;
 }
+
+.account-view {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large;
+    color: #CAB1BD; 
+}
+

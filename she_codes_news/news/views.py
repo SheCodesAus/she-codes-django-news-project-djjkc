@@ -18,11 +18,11 @@ class IndexView(generic.ListView):
         context['all_stories'] = createstory
         return context
     
-    # def user_articles(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     articles = NewsStory.objects.filter('author').order_by('-pub_date')
-    #     context['by_author'] = articles
-    #     return context
+    def user_articles(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        articles = NewsStory.objects.filter('username').order_by('-pub_date')
+        context['username'] = articles
+        return context
 
 class StoryView(generic.DetailView):
     model = NewsStory
