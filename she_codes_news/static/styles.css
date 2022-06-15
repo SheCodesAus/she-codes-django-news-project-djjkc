@@ -142,3 +142,14 @@ a, p {
     /* font-weight: bold; */
     font-family: 'Pacifico', cursive;
 }
+
+#author-list {
+    color: #cfb7c3;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    padding-top: 5%;
+    font-size: 4rem;
+}
+
+.authors-articles {
+    
+}
