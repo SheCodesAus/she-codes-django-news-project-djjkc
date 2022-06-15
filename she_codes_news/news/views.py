@@ -17,13 +17,21 @@ class IndexView(generic.ListView):
         context['latest_stories'] = createstory[:4]
         context['all_stories'] = createstory
         return context
-    
-    def user_articles(self, **kwargs):
-        user = self.get_object(**kwargs)
-        context = {}
-        articles = NewsStory.objects.filter('username').order_by('-pub_date')
-        context['username'] = articles
+
+class UserArticlesList(generic.ListView):
+    form_class = StoryForm
+    context_object_name = 'article_list'
+    template_name = 'she_codes_news/news/templates/author.html'
+    paginate_by = 50
+
+    def get_context_data(self, **kwargs):
+        context = super(UserArticlesList, self).get_context_data(**kwargs)
+        context['author'] = NewsStory.objects.all()
         return context
+
+    def get_queryset(self):
+        author_id = self.kwargs['pk']
+        return NewsStory.objects.filter(author = author_id,)
 
 class StoryView(generic.DetailView):
     model = NewsStory
@@ -40,3 +48,4 @@ class AddStoryView(generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+

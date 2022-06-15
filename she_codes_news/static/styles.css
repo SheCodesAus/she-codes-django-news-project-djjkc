@@ -132,3 +132,13 @@ a, p {
     color: #CAB1BD; 
 }
 
+#nav-bar {
+    color: #cfb7c3;
+    font-weight: bold;
+}
+
+#nav-bar1 {
+    color: #cfb7c3;
+    /* font-weight: bold; */
+    font-family: 'Pacifico', cursive;
+}
