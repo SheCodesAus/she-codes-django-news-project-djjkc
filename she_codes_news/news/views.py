@@ -32,7 +32,7 @@ class UserArticlesList(generic.ListView):
     def get_queryset(self):
         author_id = self.kwargs['pk']
         return NewsStory.objects.filter(author = author_id)
-        # return NewsStory.objects.all()
+
 
 class StoryView(generic.DetailView):
     model = NewsStory

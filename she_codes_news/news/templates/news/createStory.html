@@ -3,9 +3,7 @@
 {% block content %}
 
 <div class = "add-story-container">
-    <h1 id="add-story">
-        Add Your Story
-    </h1>
+    <h2>Add Your Story</h2>
     <form id="adding-story" action="{% url 'news:newStory' %}" method="post"> 
         {% csrf_token %}
         <div id="create-title">

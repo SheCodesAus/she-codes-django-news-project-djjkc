@@ -27,6 +27,7 @@ h1 {
 
 h2 {
     font-family: 'Montserrat Subrayada', sans-serif; 
+    color: #cfb7c3;
 }
 
 h3 {
@@ -63,14 +64,7 @@ a, p {
     flex-direction: column;
     font-family: 'Oswald', sans-serif;
     font-weight:bold;
-    font-size: large;
-    
-}
-
-#add-story {
-    color: #cfb7c3;
-    font-family: 'Montserrat Subrayada', sans-serif;
-    padding-top: 5%;
+    font-size: large; 
 }
 
 #adding-story {
@@ -151,5 +145,11 @@ a, p {
 }
 
 .authors-articles {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large; 
 }
