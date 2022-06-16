@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class = "">
+    <h2>Authors & their articles</h2>
+    <div id="all-stories">
+        {% if article_list %}
+        <ul>
+            {% for story in article_list %}
+                <div class="story-card" id="story-card-{{ position }}">
+                <img src="{{ story.image_url }}">
+                <div class="story-card-text">    
+                    <h3>{{ story.title }}</h3>
+                    <h4>{{ story.author }}</h4>
+                    <h4>{{ story.pub_date }}</h4>
+                    <h5>{{ story.snippet|linebreaks }}</h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </ul>
+            {% else %}
+                <p id="">No stories are available.</p>
+            {% endif %}
+    </div>
+</div>  
+
+{% endblock %}

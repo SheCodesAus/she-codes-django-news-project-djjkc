@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "add-story-container">
+    <h2>Create Account</h2>
+    <form id="adding-story" method="post">
+        {% csrf_token %}
+        <div id="create-title">
+        {{ form.as_p }}
+        <button type="submit">Create Account</button>
+    </form>
+    {% endblock %} 
+</div>

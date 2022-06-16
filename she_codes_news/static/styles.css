@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+    background-color: #e3e7e6;
 }
 
 header {
@@ -12,7 +14,7 @@ header {
 }
 
 img {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
 }
 
 h1 {
@@ -20,10 +22,12 @@ h1 {
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
+    color: #E7CFCD;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+    font-family: 'Montserrat Subrayada', sans-serif; 
+    color: #cfb7c3;
 }
 
 h3 {
@@ -51,4 +55,101 @@ a {
 
 a, p {
     font-family: monospace;
+}
+
+.add-story-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large; 
+}
+
+#adding-story {
+    color: #CAB1BD;   
+}
+
+#create-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+#create-date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16%;
+    padding-bottom: 1.5vw;
+}
+
+#create-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10%;
+    padding-bottom: 1.5vw;
+}
+
+#create-image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5%;
+    padding-bottom: 1.5vw;
+}
+
+#create-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5vw;
+}
+
+#submit {
+    font-weight: bold;
+    color: #CAB1BD;
+    font-family: 'Pacifico', cursive;
+}
+
+.account-view {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large;
+    color: #CAB1BD; 
+}
+
+#nav-bar {
+    color: #cfb7c3;
+    font-weight: bold;
+}
+
+#nav-bar1 {
+    color: #cfb7c3;
+    /* font-weight: bold; */
+    font-family: 'Pacifico', cursive;
+}
+
+#author-list {
+    color: #cfb7c3;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    padding-top: 5%;
+    font-size: 4rem;
+}
+
+.authors-articles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large; 
 }
