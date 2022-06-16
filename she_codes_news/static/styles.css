@@ -153,3 +153,82 @@ a, p {
     font-weight:bold;
     font-size: large; 
 }
+
+#create-user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+#create-email {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 8%;
+    padding-bottom: 1.5vw;
+}
+
+#create-password {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5.5%;
+    padding-bottom: 1.5vw;
+}
+
+#create-confirm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1%;
+    padding-bottom: 1.5vw;
+}
+
+#create-confirmtext {
+    padding-bottom: 3vw;
+    font-size:smaller;
+}
+
+#create-list {
+    font-size: medium; 
+}
+
+.add-user-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large; 
+}
+
+#adding-user, #log-user {
+    color: #CAB1BD;   
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: large; 
+}
+
+#login-user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+#login-password {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5.5%;
+    padding-bottom: 1.5vw;
+}

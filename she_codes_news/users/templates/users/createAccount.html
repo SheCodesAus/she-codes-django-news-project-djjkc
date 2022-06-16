@@ -2,13 +2,34 @@
 
 {% block content %}
 
-<div class = "add-story-container">
+<div class = "add-user-container">
     <h2>Create Account</h2>
-    <form id="adding-story" method="post">
+    <form id="adding-user" method="post">
         {% csrf_token %}
-        <div id="create-title">
-        {{ form.as_p }}
-        <button type="submit">Create Account</button>
+        <div id="create-user">
+            Username: {{ form.username }}
+        </div>
+        <div id="create-email"> 
+            Email: {{ form.email }} 
+        </div>
+        <div id="create-password"> 
+            Password: {{ form.password1 }} 
+        </div>
+        <ul id="create-list">
+            <li>Your password can't be too similar to your other personal information.</li>
+            <li>Your password must contain at least 8 characters.</li>
+            <li>Your password can’t be a commonly used password.</li>
+            <li>Your password can’t be entirely numeric.</li>
+        </ul>
+        <div id="create-confirm"> 
+            Password confirmation: {{form.password2 }} 
+        </div> 
+        <div id="create-confirmtext">*Enter the same password as before, for verification.*
+        </div>
+        <div>
+            <button id="submit" type="submit">Create Account</button>
+        </div>
     </form>
-    {% endblock %} 
+
+{% endblock %} 
 </div>
