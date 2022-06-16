@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class = "add-story-container">
+<div class = "add-story-container"> 
     <h2>Add Your Story</h2>
     <form id="adding-story" action="{% url 'news:newStory' %}" method="post"> 
         {% csrf_token %}
